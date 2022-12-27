@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      input:required:valid {
+        border-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Анкета</h1>
+    <form type="sumbit">
+      <div>
+        <label for="byname">Кличка питомца</label>
+        <input type="text" id="byname" required />*
+      </div>
+      <div>
+        <fieldset>
+          <legend><b>Данные владельца</b></legend>
+          <div>
+            <label for="name">Имя</label>
+            <input type="text" id="name" required />*
+          </div>
+          <label for="phone">Номер телефона</label>
+          <input
+            type="tel"
+            name="phone"
+            placeholder="Телефон"
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+            required
+          />
+          формат 111-111-1111
+        </fieldset>
+      </div>
+      <div><b>Порода</b></div>
+      <select>
+        <option value="1">Шотландская вислоухая</option>
+        <option value="2">Мейнкун</option>
+        <option value="3">Персидская</option>
+        <option value="4">Бенгальская</option>
+        <option value="5">Метис</option>
+      </select>
+      <div><b>Пол питомца</b></div>
+      Самец<input type="radio" name="sex" id="man" /> Самка<input
+        type="radio"
+        name="sex"
+        id="woman"
+      />
+      <div><b>Корм</b></div>
+      <div><input type="checkbox" />Сухой</div>
+      <div><input type="checkbox" />Влажный</div>
+      <div><input type="checkbox" />Натуральный</div>
+      <label for="comment">Комментарий владельца</label>
+      <div>
+        <textarea name="comment" id="comment" rows="5" cols="15" optional>
+Если хотите добавить что-то важное, можно написать это здесь</textarea
+        >
+      </div>
+      Можете добавить фото питомца<input type="file" />
+      <div><button>Сохранить</button></div>
+    </form>
+    <button id="sumbit">Отправить</button>
+    <script src="./task3.js"></script>
+  </body>
+</html>
